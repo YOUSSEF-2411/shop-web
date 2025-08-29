@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product - Shop Web</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script async crossorigin="anonymous" data-clerk-publishable-key="pk_test_Z29yZ2VvdXMtdGVycmllci03MC5jbGVyay5hY2NvdW50cy5kZXYk" src="https://gorgeous-terrier-70.clerk.accounts.dev/npm/@clerk/clerk-js@5/dist/clerk.browser.js" type="text/javascript"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Shop Web</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="checkout.html">Checkout</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+    <div class="header-actions">
+      <input type="text" id="searchInput" placeholder="Search products..." />
+      <button id="cartBtn">Cart (<span id="cartCount">0</span>)</button>
+      <div id="userProfile"></div>
+      <button id="themeToggle">🌓</button>
+    </div>
+  </header>
+
+  <section id="productDetail" class="product-detail"></section>
+
+  <div id="cartDrawer" class="cart-drawer hidden">
+    <h3>Shopping Cart</h3>
+    <div id="cartItems"></div>
+    <div class="cart-total">Total: $<span id="cartTotal">0.00</span></div>
+    <a href="checkout.html" class="btn">Checkout</a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
